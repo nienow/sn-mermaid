@@ -1,0 +1,11 @@
+{
+  "identifier": "dev.randombits.template",
+  "name": "Extension Template",
+  "content_type": "SN|Component",
+  "area": "editor-editor",
+  "version": "$VERSION$",
+  "description": "A custom editor",
+  "url": "https://nienow.github.io/sn-extension-template/",
+  "download_url": "https://nienow.github.io/sn-extension-template/latest.zip",
+  "latest_url": "https://nienow.github.io/sn-extension-template/ext.json"
+}

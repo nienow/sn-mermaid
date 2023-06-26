@@ -1,0 +1,9 @@
+{
+  "identifier": "dev.randombits.template.local",
+  "name": "Extension Template (local)",
+  "content_type": "SN|Component",
+  "area": "editor-editor",
+  "version": "0.0.1",
+  "description": "A custom editor",
+  "url": "http://localhost:8080/"
+}

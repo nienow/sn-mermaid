@@ -1,0 +1,40 @@
+{
+  "name": "sn-extension-template",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "webpack serve --mode development",
+    "build": "webpack",
+    "preview": "live-server --cors dist/"
+  },
+  "dependencies": {
+    "@preact/compat": "^17.1.2",
+    "@standardnotes/component-relay": "^2.2.2",
+    "@standardnotes/stylekit": "5.29.3",
+    "preact": "^10.13.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.21.5",
+    "@babel/plugin-transform-react-jsx": "^7.21.5",
+    "@babel/preset-env": "^7.21.5",
+    "@babel/preset-typescript": "^7.21.5",
+    "@types/node": "^18.16.3",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.1",
+    "babel-loader": "^9.1.2",
+    "copy-webpack-plugin": "^11.0.0",
+    "css-loader": "^6.7.3",
+    "html-webpack-plugin": "^5.5.1",
+    "live-server": "^1.2.2",
+    "sass": "^1.62.1",
+    "sass-loader": "^13.2.2",
+    "style-loader": "^3.3.2",
+    "ts-loader": "^9.4.2",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.4",
+    "url-loader": "^4.1.1",
+    "webpack": "^5.81.0",
+    "webpack-cli": "^5.0.2",
+    "webpack-dev-server": "^4.13.3",
+    "zip-webpack-plugin": "^4.0.1"
+  }
+}
