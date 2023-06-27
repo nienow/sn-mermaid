@@ -2,8 +2,7 @@ import React, {useState} from 'react';
 import TextEditor from "./TextEditor";
 import {styled} from "goober";
 import MermaidDisplay from "./MermaidDisplay";
-import {getNoteText, updateNoteText} from "../sn-api";
-import Examples from "./Examples";
+import {getNoteText} from "../sn-api";
 
 const Container = styled('div')`
   display: flex;
@@ -16,26 +15,14 @@ const CodeContainer = styled('div')`
   flex-direction: column;
 `;
 
-const CodePanel = styled('div')`
-  padding: 4px 20px;
-`;
-
 
 const MermaidEditor = () => {
   const [code, setCode] = useState(getNoteText());
-
-  const selectExample = (val) => {
-    setCode(val);
-    updateNoteText(val);
-  };
-
   return (
     <Container>
       <CodeContainer>
-        <TextEditor code={code} onUpdate={setCode}/>
-        <CodePanel>
-          <Examples onSelect={selectExample}/>
-        </CodePanel>
+        <TextEditor onUpdate={setCode}/>
+
       </CodeContainer>
 
       <MermaidDisplay code={code}/>

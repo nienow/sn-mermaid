@@ -1,10 +1,16 @@
 import React, {useRef} from 'react';
 import {useEffect} from "preact/compat";
 import * as monaco from 'monaco-editor';
-import {updateNoteText} from "../sn-api";
+import {getNoteText, updateNoteText} from "../sn-api";
+import Examples from "./Examples";
+import {styled} from "goober";
 
+const CodePanel = styled('div')`
+  padding: 4px 20px;
+`;
 
-const TextEditor = ({code, onUpdate}) => {
+let editor;
+const TextEditor = ({onUpdate}) => {
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -16,10 +22,10 @@ const TextEditor = ({code, onUpdate}) => {
       language: 'mermaid',
       lineDecorationsWidth: 5,
       contextmenu: false,
-      value: code
+      value: getNoteText()
     };
     // eslint-disable-next-line @typescript-eslint/no-unsafe-call
-    let editor = monaco.editor.create(ref.current, editorOptions);
+    editor = monaco.editor.create(ref.current, editorOptions);
     let text = '';
     editor.onDidChangeModelContent(({isFlush, changes}) => {
       const newText = editor?.getValue();
@@ -31,25 +37,6 @@ const TextEditor = ({code, onUpdate}) => {
       updateNoteText(text);
       onUpdate(text);
     });
-    // editor.addAction({
-    //   id: 'mermaid-render-diagram',
-    //   label: 'Render Diagram',
-    //   keybindings: [monaco.KeyMod.CtrlCmd | monaco.KeyCode.Enter],
-    //   run: function () {
-    //     // syncDiagram();
-    //   }
-    // });
-    // monaco.editor.setTheme($themeStore.isDark ? 'mermaid-dark' : 'mermaid');
-    // const resizeObserver = new ResizeObserver((entries) => {
-    //   editor?.layout({
-    //     height: entries[0].contentRect.height,
-    //     width: entries[0].contentRect.width
-    //   });
-    // });
-    //
-    // if (document.body) {
-    //   resizeObserver.observe(document.body);
-    // }
 
     window.addEventListener('resize', () => {
       editor?.layout({
@@ -59,13 +46,22 @@ const TextEditor = ({code, onUpdate}) => {
     });
 
     return () => {
-      // console.log(`editor disposed`);
       editor?.dispose();
     };
-  }, [code]);
+  }, []);
+
+  const selectExample = (val) => {
+    editor.getModel().setValue(val);
+    onUpdate(val);
+    updateNoteText(val);
+  };
+
   return (
     <>
       <div ref={ref} id="editor" className="code-container"></div>
+      <CodePanel>
+        <Examples onSelect={selectExample}/>
+      </CodePanel>
     </>
   );
 }

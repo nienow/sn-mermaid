@@ -11,7 +11,7 @@ import * as monaco from "monaco-editor";
 
 setup(React.createElement);
 
-const root = createRoot(document.getElementById('root'));
+const root = createRoot(document.getElementById('diagrams-root'));
 
 export const rerenderRoot = () => {
   root.render(

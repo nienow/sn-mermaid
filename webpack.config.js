@@ -77,7 +77,7 @@ module.exports = (env, argv) => ({
     }),
     new HtmlWebpackPlugin({
       filename: "demo.html",
-      template: "./src/index.html",
+      template: "./src/demo.html",
       chunks: ["demo"]
     }),
     new CopyPlugin({

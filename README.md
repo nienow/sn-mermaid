@@ -1,19 +1,12 @@
-# Standard Notes Editor Extension Template
+# Standard Notes Diagrams Extension
 
-Full Documentation & Demo at https://randombits.dev/standard-notes/template
+This is a diagrams editor that uses [Mermaid](https://mermaid.js.org/).
 
-## Getting Started
+See a [demo](https://nienow.github.io/sn-diagrams/demo.html).
 
-Click on the `Use this template` button to create a new repo based on this template.
+Install the extension using: https://nienow.github.io/sn-diagrams/ext.json
 
-Then clone your new repo, install dependencies, and start the dev server:
+Learn how to install extensions: https://randombits.dev/standard-notes/installing-extensions
 
-```
-# Install dependencies
-pnpm install
-
-# Start Dev Server
-pnpm run start
-```
-
-The demo page should be launched automatically.
+Learn how to create your own
+extensions: https://randombits.dev/standard-notes/creating-extensions

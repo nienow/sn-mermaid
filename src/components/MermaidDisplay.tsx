@@ -1,7 +1,6 @@
 import React, {useRef} from 'react';
 import mermaid from 'mermaid';
 import {useEffect} from "preact/compat";
-import {getNoteText} from "../sn-api";
 import panzoom from 'svg-pan-zoom';
 import {styled} from "goober";
 import {ActionButton} from "./Button";
@@ -38,7 +37,7 @@ const MermaidDisplay = ({code}) => {
     if (!code) {
       return;
     }
-    mermaid.render('sn-output', getNoteText()).then(({svg, fns}) => {
+    mermaid.render('sn-output', code).then(({svg, fns}) => {
 
       document.getElementById('output-container').innerHTML = svg;
 
@@ -51,6 +50,12 @@ const MermaidDisplay = ({code}) => {
         center: true,
 
       });
+      if (fns) {
+        fns(outputEl);
+      }
+    }).catch(err => {
+      document.getElementById('dsn-output')?.remove();
+      document.getElementById('output-container').innerHTML = err.message;
     });
 
   }, [code]);
@@ -72,7 +77,7 @@ const MermaidDisplay = ({code}) => {
   };
 
   const reset = () => {
-    pzoom.resetZoom();
+    pzoom.reset();
   };
 
   return (

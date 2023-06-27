@@ -9,7 +9,7 @@ const componentRelay = new ComponentRelay({
   options: {
     coallesedSaving: true,
     coallesedSavingDelay: 400,
-    debug: true
+    debug: false
   }
 });
 
