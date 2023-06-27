@@ -1,4 +1,5 @@
 import {IMetadata} from '../definitions';
+import {EXAMPLES} from '../util/examples';
 
 export interface TestData {
   title: string;
@@ -10,20 +11,54 @@ const EMPTY = {
   title: 'Empty',
   text: ''
 };
-const SMALL = {
-  title: 'Small',
-  text: 'This is the note content for the small example',
-  meta: {
-    rows: 3
-  }
+const FLOW = {
+  title: 'Flowchart',
+  text: EXAMPLES.Flow
 };
 
-const LARGE = {
-  title: 'Large',
-  text: 'This is the note content for the large example',
-  meta: {
-    rows: 10
-  }
+const SEQ = {
+  title: 'Sequence',
+  text: EXAMPLES.Sequence
 };
 
-export const TEST_DATA: TestData[] = [SMALL, LARGE, EMPTY];
+const CLASS = {
+  title: 'Class',
+  text: EXAMPLES.Class
+};
+
+const STATE = {
+  title: 'State',
+  text: EXAMPLES.State
+};
+
+const Gantt = {
+  title: 'Gantt',
+  text: EXAMPLES.Gantt
+};
+
+const ER = {
+  title: 'ER',
+  text: EXAMPLES.ER
+};
+
+const PIE = {
+  title: 'Pie',
+  text: EXAMPLES.Pie
+};
+
+const GIT = {
+  title: 'Git',
+  text: EXAMPLES.Git
+};
+
+const Mindmap = {
+  title: 'Mindmap',
+  text: EXAMPLES.Mindmap
+};
+
+const QuadrantChart = {
+  title: 'Quadrant',
+  text: EXAMPLES.QuadrantChart
+};
+
+export const TEST_DATA: TestData[] = [FLOW, SEQ, CLASS, STATE, Gantt, PIE, ER, GIT, Mindmap, QuadrantChart, EMPTY];

@@ -2,22 +2,32 @@ import React from 'react';
 
 import './index.scss';
 import {createRoot} from "react-dom/client";
-import CustomEditor from "./components/CustomEditor";
+import MermaidEditor from "./components/MermaidEditor";
 import {connectToStandardNotes} from "./sn-api";
+import mermaidAPI from "mermaid";
+import {setup} from "goober";
+import {initEditor} from "./util/monacoExtra";
+import * as monaco from "monaco-editor";
 
+setup(React.createElement);
 
 const root = createRoot(document.getElementById('root'));
 
 export const rerenderRoot = () => {
   root.render(
     <React.StrictMode>
-      <CustomEditor/>
+      <MermaidEditor/>
     </React.StrictMode>
   );
 };
 
 connectToStandardNotes(rerenderRoot);
 
+mermaidAPI.initialize({
+  startOnLoad: false, theme: 'dark'
+});
+
+initEditor(monaco);
 
 
 

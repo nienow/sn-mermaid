@@ -13,7 +13,7 @@ const DemoApp = () => {
   const iframeRef = useRef<HTMLIFrameElement>();
   const [selected, setSelected] = useState(0);
   const [disabled, setDisabled] = useState(false);
-  const [theme, setTheme] = useState('light');
+  const [theme, setTheme] = useState('dark');
 
   const changeMenuItem = (i) => {
     setSelected(i);
@@ -49,8 +49,8 @@ const DemoApp = () => {
         <div className="content-header">
           <div><input id="editingDisabled" type="checkbox" checked={disabled} onChange={onToggleDisabled}></input><label
             htmlFor="editingDisabled"> Editing Disabled</label></div>
-          <div><input id="isDark" type="checkbox" checked={theme === 'dark'} onChange={onChangeTheme}></input><label
-            htmlFor="isDark"> Dark Theme</label></div>
+          {/*<div><input id="isDark" type="checkbox" checked={theme === 'dark'} onChange={onChangeTheme}></input><label*/}
+          {/*  htmlFor="isDark"> Dark Theme</label></div>*/}
           <div id="last-saved"></div>
         </div>
         <iframe key={selected} ref={iframeRef} src="index.html" onLoad={onFrameLoad}/>

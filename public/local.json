@@ -1,6 +1,6 @@
 {
-  "identifier": "dev.randombits.template.local",
-  "name": "Extension Template (local)",
+  "identifier": "dev.randombits.diagrams.local",
+  "name": "Diagrams (local)",
   "content_type": "SN|Component",
   "area": "editor-editor",
   "version": "0.0.1",

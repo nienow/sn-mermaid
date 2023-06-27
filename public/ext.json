@@ -1,11 +1,11 @@
 {
-  "identifier": "dev.randombits.template",
-  "name": "Extension Template",
+  "identifier": "dev.randombits.diagrams",
+  "name": "Diagrams",
   "content_type": "SN|Component",
   "area": "editor-editor",
   "version": "$VERSION$",
-  "description": "A custom editor",
-  "url": "https://nienow.github.io/sn-extension-template/",
-  "download_url": "https://nienow.github.io/sn-extension-template/latest.zip",
-  "latest_url": "https://nienow.github.io/sn-extension-template/ext.json"
+  "description": "Software Diagrams using Mermaid",
+  "url": "https://nienow.github.io/sn-diagrams/",
+  "download_url": "https://nienow.github.io/sn-diagrams/latest.zip",
+  "latest_url": "https://nienow.github.io/sn-diagrams/ext.json"
 }

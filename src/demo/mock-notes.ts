@@ -15,6 +15,12 @@ export class MockStandardNotes {
   public onReady(childWindow) {
     this.childWindow = childWindow;
     childWindow.postMessage(REGISTERED_EVENT);
+    this.childWindow.postMessage({
+      action: 'themes',
+      data: {
+        themes: ['dark.css']
+      }
+    }, '*');
   }
 
   public toggleLock(isLocked: boolean) {
