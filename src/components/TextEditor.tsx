@@ -1,7 +1,7 @@
 import React, {useRef} from 'react';
 import {useEffect} from "preact/compat";
 import * as monaco from 'monaco-editor';
-import {getNoteText, updateNoteText} from "../sn-api";
+import {getNoteText, isNoteLocked, updateNoteText} from "../sn-api";
 import Examples from "./Examples";
 import {styled} from "goober";
 
@@ -22,6 +22,7 @@ const TextEditor = ({onUpdate}) => {
       language: 'mermaid',
       lineDecorationsWidth: 5,
       contextmenu: false,
+      readOnly: isNoteLocked(),
       value: getNoteText()
     };
     // eslint-disable-next-line @typescript-eslint/no-unsafe-call
@@ -59,9 +60,9 @@ const TextEditor = ({onUpdate}) => {
   return (
     <>
       <div ref={ref} id="editor" className="code-container"></div>
-      <CodePanel>
+      {isNoteLocked() ? <div>Editing Disabled</div> : <CodePanel>
         <Examples onSelect={selectExample}/>
-      </CodePanel>
+      </CodePanel>}
     </>
   );
 }
