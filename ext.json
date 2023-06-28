@@ -1,11 +1,11 @@
 {
-  "identifier": "dev.randombits.diagrams",
-  "name": "Diagrams",
+  "identifier": "dev.randombits.mermaid",
+  "name": "Mermaid",
   "content_type": "SN|Component",
   "area": "editor-editor",
   "version": "1.0.0",
-  "description": "Software Diagrams using Mermaid",
-  "url": "https://nienow.github.io/sn-diagrams/",
-  "download_url": "https://nienow.github.io/sn-diagrams/latest.zip",
-  "latest_url": "https://nienow.github.io/sn-diagrams/ext.json"
+  "description": "Diagrams and Charts using Mermaid",
+  "url": "https://nienow.github.io/sn-mermaid/",
+  "download_url": "https://nienow.github.io/sn-mermaid/latest.zip",
+  "latest_url": "https://nienow.github.io/sn-mermaid/ext.json"
 }

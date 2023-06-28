@@ -1,6 +1,6 @@
 {
-  "identifier": "dev.randombits.diagrams.local",
-  "name": "Diagrams (local)",
+  "identifier": "dev.randombits.mermaid.local",
+  "name": "Mermaid (local)",
   "content_type": "SN|Component",
   "area": "editor-editor",
   "version": "0.0.1",
