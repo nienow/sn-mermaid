@@ -2,6 +2,18 @@ import {IMetadata, MY_DOMAIN, SN_DOMAIN} from './definitions';
 import {getPreviewText} from './utils';
 import ComponentRelay from '@standardnotes/component-relay';
 
+let subscriptions = [];
+export const subscribeToNoteChanges = (callback: () => void) => {
+  subscriptions.push(callback);
+};
+
+export const unsubscribeToNotechanges = (callback: () => void) => {
+  const index = subscriptions.indexOf(callback);
+  if (index >= 0) {
+    subscriptions.splice(index, 1);
+  }
+};
+
 let currentNote;
 
 const componentRelay = new ComponentRelay({
@@ -19,6 +31,9 @@ export const connectToStandardNotes = (noteReadyCallback: () => void) => {
     // Only update UI on non-metadata updates.
     if (!note.isMetadataUpdate) {
       noteReadyCallback();
+      subscriptions.forEach((sub) => {
+        sub();
+      });
     }
   });
 };

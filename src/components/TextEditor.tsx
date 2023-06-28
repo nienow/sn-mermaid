@@ -1,7 +1,7 @@
-import React, {useRef} from 'react';
+import React, {useRef, useState} from 'react';
 import {useEffect} from "preact/compat";
 import * as monaco from 'monaco-editor';
-import {getNoteText, updateNoteText} from "../sn-api";
+import {getNoteText, isNoteLocked, subscribeToNoteChanges, unsubscribeToNotechanges, updateNoteText} from "../sn-api";
 import Examples from "./Examples";
 import {styled} from "goober";
 
@@ -10,8 +10,18 @@ const CodePanel = styled('div')`
 `;
 
 let editor;
+
+
 const TextEditor = ({onUpdate}) => {
   const ref = useRef<HTMLDivElement>(null);
+  const [showExamples, setShowExamples] = useState(!isNoteLocked());
+
+  const onNoteChanges = () => {
+    setShowExamples(!isNoteLocked());
+    if (editor) {
+      editor.updateOptions({readOnly: isNoteLocked()});
+    }
+  };
 
   useEffect(() => {
     let editorOptions: monaco.editor.IStandaloneEditorConstructionOptions = {
@@ -22,6 +32,7 @@ const TextEditor = ({onUpdate}) => {
       language: 'mermaid',
       lineDecorationsWidth: 5,
       contextmenu: false,
+      readOnly: isNoteLocked(),
       value: getNoteText()
     };
     // eslint-disable-next-line @typescript-eslint/no-unsafe-call
@@ -45,8 +56,11 @@ const TextEditor = ({onUpdate}) => {
       });
     });
 
+    subscribeToNoteChanges(onNoteChanges);
+
     return () => {
       editor?.dispose();
+      unsubscribeToNotechanges(onNoteChanges);
     };
   }, []);
 
@@ -59,9 +73,9 @@ const TextEditor = ({onUpdate}) => {
   return (
     <>
       <div ref={ref} id="editor" className="code-container"></div>
-      <CodePanel>
+      {showExamples && <CodePanel>
         <Examples onSelect={selectExample}/>
-      </CodePanel>
+      </CodePanel>}
     </>
   );
 }
