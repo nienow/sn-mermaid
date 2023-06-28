@@ -1,5 +1,5 @@
 {
-  "name": "sn-extension-template",
+  "name": "sn-mermaid",
   "version": "1.0.0",
   "scripts": {
     "start": "webpack serve --mode development",
