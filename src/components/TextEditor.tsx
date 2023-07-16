@@ -1,9 +1,10 @@
 import React, {useRef, useState} from 'react';
 import {useEffect} from "preact/compat";
 import * as monaco from 'monaco-editor';
-import {getNoteText, isNoteLocked, subscribeToNoteChanges, unsubscribeToNotechanges, updateNoteText} from "../sn-api";
 import Examples from "./Examples";
 import {styled} from "goober";
+import snApi from "sn-extension-api";
+
 
 const CodePanel = styled('div')`
   padding: 4px 20px;
@@ -11,17 +12,9 @@ const CodePanel = styled('div')`
 
 let editor;
 
-
 const TextEditor = ({onUpdate}) => {
   const ref = useRef<HTMLDivElement>(null);
-  const [showExamples, setShowExamples] = useState(!isNoteLocked());
-
-  const onNoteChanges = () => {
-    setShowExamples(!isNoteLocked());
-    if (editor) {
-      editor.updateOptions({readOnly: isNoteLocked()});
-    }
-  };
+  const [showExamples, setShowExamples] = useState(!snApi.locked);
 
   useEffect(() => {
     let editorOptions: monaco.editor.IStandaloneEditorConstructionOptions = {
@@ -32,8 +25,8 @@ const TextEditor = ({onUpdate}) => {
       language: 'mermaid',
       lineDecorationsWidth: 5,
       contextmenu: false,
-      readOnly: isNoteLocked(),
-      value: getNoteText()
+      readOnly: snApi.locked,
+      value: snApi.text
     };
     // eslint-disable-next-line @typescript-eslint/no-unsafe-call
     editor = monaco.editor.create(ref.current, editorOptions);
@@ -45,7 +38,7 @@ const TextEditor = ({onUpdate}) => {
         return;
       }
       text = newText;
-      updateNoteText(text);
+      snApi.updateNote(text);
       onUpdate(text);
     });
 
@@ -56,18 +49,23 @@ const TextEditor = ({onUpdate}) => {
       });
     });
 
-    subscribeToNoteChanges(onNoteChanges);
+    const unsub = snApi.subscribe(() => {
+      setShowExamples(!snApi.locked);
+      if (editor) {
+        editor.updateOptions({readOnly: snApi.locked});
+      }
+    });
 
     return () => {
       editor?.dispose();
-      unsubscribeToNotechanges(onNoteChanges);
+      unsub();
     };
   }, []);
 
   const selectExample = (val) => {
     editor.getModel().setValue(val);
     onUpdate(val);
-    updateNoteText(val);
+    snApi.updateNote(val);
   };
 
   return (

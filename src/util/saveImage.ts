@@ -1,6 +1,6 @@
 import mermaid from 'mermaid';
 import {toBase64} from 'js-base64';
-import {getNoteText} from '../sn-api';
+import snApi from 'sn-extension-api';
 
 export const copyClipboard = () => {
   exportImage(clipboardCopy);
@@ -10,7 +10,7 @@ export const downloadPNG = () => {
 };
 
 export const downloadSVG = () => {
-  mermaid.render('export', getNoteText()).then(({svg}) => {
+  mermaid.render('export', snApi.text).then(({svg}) => {
     simulateDownload(getFileName('svg'), `data:image/svg+xml;base64,${getBase64SVG(svg)}`);
   });
 };

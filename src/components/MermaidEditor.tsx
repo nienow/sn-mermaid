@@ -2,7 +2,8 @@ import React, {useState} from 'react';
 import TextEditor from "./TextEditor";
 import {styled} from "goober";
 import MermaidDisplay from "./MermaidDisplay";
-import {getNoteText} from "../sn-api";
+import snApi from "sn-extension-api";
+
 
 const Container = styled('div')`
   display: flex;
@@ -17,7 +18,7 @@ const CodeContainer = styled('div')`
 
 
 const MermaidEditor = () => {
-  const [code, setCode] = useState(getNoteText());
+  const [code, setCode] = useState(snApi.text);
   return (
     <Container>
       <CodeContainer>
