@@ -13,7 +13,7 @@
     "mermaid": "^10.2.3",
     "monaco-editor": "0.39.0",
     "preact": "^10.13.2",
-    "sn-extension-api": "^0.1.0",
+    "sn-extension-api": "^0.2.1",
     "svg-pan-zoom": "^3.6.1"
   },
   "devDependencies": {

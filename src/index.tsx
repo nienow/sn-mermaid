@@ -7,10 +7,7 @@ import mermaidAPI from "mermaid";
 import {setup} from "goober";
 import {initEditor} from "./util/monacoExtra";
 import * as monaco from "monaco-editor";
-import {getPreviewText} from "./utils";
 import snApi from "sn-extension-api";
-
-console.log(snApi);
 
 setup(React.createElement);
 
@@ -25,11 +22,7 @@ export const rerenderRoot = () => {
 };
 
 
-snApi.initialize({
-  generatePreview: () => {
-    return getPreviewText(snApi.text);
-  }
-});
+snApi.initialize();
 
 snApi.subscribe(() => {
   rerenderRoot();

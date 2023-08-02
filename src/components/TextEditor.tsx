@@ -38,7 +38,7 @@ const TextEditor = ({onUpdate}) => {
         return;
       }
       text = newText;
-      snApi.updateNote(text);
+      snApi.text = text;
       onUpdate(text);
     });
 
@@ -65,7 +65,7 @@ const TextEditor = ({onUpdate}) => {
   const selectExample = (val) => {
     editor.getModel().setValue(val);
     onUpdate(val);
-    snApi.updateNote(val);
+    snApi.text = val;
   };
 
   return (
