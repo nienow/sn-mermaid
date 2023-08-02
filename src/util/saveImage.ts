@@ -58,7 +58,7 @@ const simulateDownload = (download: string, href: string): void => {
   a.remove();
 };
 const exportImage = (exporter: any) => {
-  mermaid.render('export', getNoteText()).then(({svg}) => {
+  mermaid.render('export', snApi.text).then(({svg}) => {
     const [width, height] = calcSize(svg);
     const canvas: HTMLCanvasElement = document.createElement('canvas');
     canvas.width = width;
@@ -94,21 +94,4 @@ const getBase64SVG = (svg: string): string => {
   const svgString = svg.replaceAll('<br>', '<br/>')
     .replaceAll(/<img([^>]*)>/g, (m, g: string) => `<img ${g} />`);
   return toBase64(svgString);
-};
-
-const getSvgEl = () => {
-  const svgEl: HTMLElement = document
-    .querySelector('#sn-output')!
-    .cloneNode(true) as HTMLElement;
-  svgEl.setAttribute('xmlns:xlink', 'http://www.w3.org/1999/xlink');
-  const fontAwesomeCdnUrl = Array.from(document.head.getElementsByTagName('link'))
-    .map((l) => l.href)
-    .find((h) => h.includes('font-awesome'));
-  if (fontAwesomeCdnUrl == null) {
-    return svgEl;
-  }
-  const styleEl = document.createElement('style');
-  styleEl.innerText = `@import url("${fontAwesomeCdnUrl}");'`;
-  svgEl.prepend(styleEl);
-  return svgEl;
 };
