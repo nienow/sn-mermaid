@@ -63,6 +63,7 @@ module.exports = (env, argv) => ({
   devServer: {
     open: ['/demo.html'],
     https: false,
+    port: 8081,
     headers: {
       "Access-Control-Allow-Origin": "*",
       "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, PATCH, OPTIONS",

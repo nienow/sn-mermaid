@@ -20,8 +20,8 @@ dependencies:
     specifier: ^10.13.2
     version: 10.13.2
   sn-extension-api:
-    specifier: ^0.2.1
-    version: 0.2.1
+    specifier: ^0.2.2
+    version: 0.2.2
   svg-pan-zoom:
     specifier: ^3.6.1
     version: 3.6.1
@@ -5247,8 +5247,8 @@ packages:
     engines: {node: '>=12'}
     dev: true
 
-  /sn-extension-api@0.2.1:
-    resolution: {integrity: sha512-P6iJEiCTc7Aud7+h2LfYBjC5t4AQIFhOkR/qE9wG7+1E95tC4ygh/GKX5WsmdZYfBk484E9waDvwNrr8yzD4tg==}
+  /sn-extension-api@0.2.2:
+    resolution: {integrity: sha512-++xVNpGzYwoErlKbih1E4VhUH9+reNggW/QtiF1dHaYW8lL99+rtEbEMBeW0xcuwbK0mVUf4JOUe0e9td8UC7w==}
     dev: false
 
   /snapdragon-node@2.1.1:
