@@ -10,7 +10,7 @@
     "@preact/compat": "^17.1.2",
     "goober": "^2.1.13",
     "js-base64": "^3.7.5",
-    "mermaid": "^10.4.0",
+    "mermaid": "^10.5.0",
     "monaco-editor": "0.43.0",
     "preact": "^10.17.1",
     "sn-extension-api": "0.3.2",
