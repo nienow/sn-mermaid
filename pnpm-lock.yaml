@@ -43,9 +43,6 @@ devDependencies:
   '@babel/preset-typescript':
     specifier: ^7.23.2
     version: 7.23.2(@babel/core@7.23.2)
-  '@types/node':
-    specifier: ^18.16.3
-    version: 18.16.3
   '@types/react':
     specifier: ^18.2.33
     version: 18.2.33
