@@ -7,13 +7,13 @@ settings:
 dependencies:
   '@preact/compat':
     specifier: ^17.1.2
-    version: 17.1.2(preact@10.19.5)
+    version: 17.1.2(preact@10.19.6)
   goober:
     specifier: ^2.1.14
     version: 2.1.14(csstype@3.1.3)
   js-base64:
-    specifier: ^3.7.6
-    version: 3.7.6
+    specifier: ^3.7.7
+    version: 3.7.7
   mermaid:
     specifier: ^10.8.0
     version: 10.8.0
@@ -21,8 +21,8 @@ dependencies:
     specifier: 0.46.0
     version: 0.46.0
   preact:
-    specifier: ^10.19.5
-    version: 10.19.5
+    specifier: ^10.19.6
+    version: 10.19.6
   sn-extension-api:
     specifier: 0.3.4
     version: 0.3.4
@@ -44,8 +44,8 @@ devDependencies:
     specifier: ^7.23.3
     version: 7.23.3(@babel/core@7.23.9)
   '@types/react':
-    specifier: ^18.2.57
-    version: 18.2.57
+    specifier: ^18.2.59
+    version: 18.2.59
   '@types/react-dom':
     specifier: ^18.2.19
     version: 18.2.19
@@ -65,11 +65,11 @@ devDependencies:
     specifier: ^1.2.2
     version: 1.2.2
   sass:
-    specifier: ^1.71.0
-    version: 1.71.0
+    specifier: ^1.71.1
+    version: 1.71.1
   sass-loader:
     specifier: ^14.1.1
-    version: 14.1.1(sass@1.71.0)(webpack@5.90.3)
+    version: 14.1.1(sass@1.71.1)(webpack@5.90.3)
   style-loader:
     specifier: ^3.3.4
     version: 3.3.4(webpack@5.90.3)
@@ -78,7 +78,7 @@ devDependencies:
     version: 9.5.1(typescript@5.3.3)(webpack@5.90.3)
   ts-node:
     specifier: ^10.9.2
-    version: 10.9.2(@types/node@20.11.19)(typescript@5.3.3)
+    version: 10.9.2(@types/node@20.11.20)(typescript@5.3.3)
   typescript:
     specifier: ^5.3.3
     version: 5.3.3
@@ -1470,12 +1470,12 @@ packages:
     dev: true
     optional: true
 
-  /@preact/compat@17.1.2(preact@10.19.5):
+  /@preact/compat@17.1.2(preact@10.19.6):
     resolution: {integrity: sha512-7pOZN9lMDDRQ+6aWvjwTp483KR8/zOpfS83wmOo3zfuLKdngS8/5RLbsFWzFZMGdYlotAhX980hJ75bjOHTwWg==}
     peerDependencies:
       preact: '*'
     dependencies:
-      preact: 10.19.5
+      preact: 10.19.6
     dev: false
 
   /@sindresorhus/merge-streams@1.0.0:
@@ -1629,6 +1629,12 @@ packages:
       undici-types: 5.26.5
     dev: true
 
+  /@types/node@20.11.20:
+    resolution: {integrity: sha512-7/rR21OS+fq8IyHTgtLkDK949uzsa6n8BkziAKtPVpugIkO6D+/ooXMvzXxDnZrmtXVfjb1bKQafYpb8s89LOg==}
+    dependencies:
+      undici-types: 5.26.5
+    dev: true
+
   /@types/prop-types@15.7.11:
     resolution: {integrity: sha512-ga8y9v9uyeiLdpKddhxYQkxNDrfvuPrlFb0N1qnZZByvcElJaXthF1UhvCh9TLWJBEHeNtdnbysW7Y6Uq8CVng==}
     dev: true
@@ -1644,11 +1650,11 @@ packages:
   /@types/react-dom@18.2.19:
     resolution: {integrity: sha512-aZvQL6uUbIJpjZk4U8JZGbau9KDeAwMfmhyWorxgBkqDIEf6ROjRozcmPIicqsUwPUjbkDfHKgGee1Lq65APcA==}
     dependencies:
-      '@types/react': 18.2.57
+      '@types/react': 18.2.59
     dev: true
 
-  /@types/react@18.2.57:
-    resolution: {integrity: sha512-ZvQsktJgSYrQiMirAN60y4O/LRevIV8hUzSOSNB6gfR3/o3wCBFQx3sPwIYtuDMeiVgsSS3UzCV26tEzgnfvQw==}
+  /@types/react@18.2.59:
+    resolution: {integrity: sha512-DE+F6BYEC8VtajY85Qr7mmhTd/79rJKIHCg99MU9SWPB4xvLb6D1za2vYflgZfmPqQVEr6UqJTnLXEwzpVPuOg==}
     dependencies:
       '@types/prop-types': 15.7.11
       '@types/scheduler': 0.16.8
@@ -4064,8 +4070,8 @@ packages:
       supports-color: 8.1.1
     dev: true
 
-  /js-base64@3.7.6:
-    resolution: {integrity: sha512-NPrWuHFxFUknr1KqJRDgUQPexQF0uIJWjeT+2KjEePhitQxQEx5EJBG1lVn5/hc8aLycTpXrDOgPQ6Zq+EDiTA==}
+  /js-base64@3.7.7:
+    resolution: {integrity: sha512-7rCnleh0z2CkXhH67J8K1Ytz0b2Y+yxTPL+/KOJoa20hfnVQ/3/T6W/KflYI4bRHRagNeXeU2bkNGI3v1oS/lw==}
     dev: false
 
   /js-tokens@4.0.0:
@@ -4995,8 +5001,8 @@ packages:
       source-map-js: 1.0.2
     dev: true
 
-  /preact@10.19.5:
-    resolution: {integrity: sha512-OPELkDmSVbKjbFqF9tgvOowiiQ9TmsJljIzXRyNE8nGiis94pwv1siF78rQkAP1Q1738Ce6pellRg/Ns/CtHqQ==}
+  /preact@10.19.6:
+    resolution: {integrity: sha512-gympg+T2Z1fG1unB8NH29yHJwnEaCH37Z32diPDku316OTnRPeMbiRV9kTrfZpocXjdfnWuFUl/Mj4BHaf6gnw==}
     dev: false
 
   /pretty-error@4.0.0:
@@ -5284,7 +5290,7 @@ packages:
   /safer-buffer@2.1.2:
     resolution: {integrity: sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==}
 
-  /sass-loader@14.1.1(sass@1.71.0)(webpack@5.90.3):
+  /sass-loader@14.1.1(sass@1.71.1)(webpack@5.90.3):
     resolution: {integrity: sha512-QX8AasDg75monlybel38BZ49JP5Z+uSKfKwF2rO7S74BywaRmGQMUBw9dtkS+ekyM/QnP+NOrRYq8ABMZ9G8jw==}
     engines: {node: '>= 18.12.0'}
     peerDependencies:
@@ -5306,12 +5312,12 @@ packages:
         optional: true
     dependencies:
       neo-async: 2.6.2
-      sass: 1.71.0
+      sass: 1.71.1
       webpack: 5.90.3(webpack-cli@5.1.4)
     dev: true
 
-  /sass@1.71.0:
-    resolution: {integrity: sha512-HKKIKf49Vkxlrav3F/w6qRuPcmImGVbIXJ2I3Kg0VMA+3Bav+8yE9G5XmP5lMj6nl4OlqbPftGAscNaNu28b8w==}
+  /sass@1.71.1:
+    resolution: {integrity: sha512-wovtnV2PxzteLlfNzbgm1tFXPLoZILYAMJtvoXXkD7/+1uP41eKkIt1ypWq5/q2uT94qHjXehEYfmjKOvjL9sg==}
     engines: {node: '>=14.0.0'}
     hasBin: true
     dependencies:
@@ -5851,7 +5857,7 @@ packages:
       webpack: 5.90.3(webpack-cli@5.1.4)
     dev: true
 
-  /ts-node@10.9.2(@types/node@20.11.19)(typescript@5.3.3):
+  /ts-node@10.9.2(@types/node@20.11.20)(typescript@5.3.3):
     resolution: {integrity: sha512-f0FFpIdcHgn8zcPSbf1dRevwt047YMnaiJM3u2w2RewrB+fob/zePZcrOyQoLMMO7aBIddLcQIEK5dYjkLnGrQ==}
     hasBin: true
     peerDependencies:
@@ -5870,7 +5876,7 @@ packages:
       '@tsconfig/node12': 1.0.11
       '@tsconfig/node14': 1.0.3
       '@tsconfig/node16': 1.0.4
-      '@types/node': 20.11.19
+      '@types/node': 20.11.20
       acorn: 8.11.2
       acorn-walk: 8.3.1
       arg: 4.1.3
