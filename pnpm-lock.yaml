@@ -7,7 +7,7 @@ settings:
 dependencies:
   '@preact/compat':
     specifier: ^17.1.2
-    version: 17.1.2(preact@10.20.2)
+    version: 17.1.2(preact@10.21.0)
   goober:
     specifier: ^2.1.14
     version: 2.1.14(csstype@3.1.3)
@@ -21,8 +21,8 @@ dependencies:
     specifier: 0.48.0
     version: 0.48.0
   preact:
-    specifier: ^10.20.2
-    version: 10.20.2
+    specifier: ^10.21.0
+    version: 10.21.0
   sn-extension-api:
     specifier: 0.3.4
     version: 0.3.4
@@ -65,11 +65,11 @@ devDependencies:
     specifier: ^1.2.2
     version: 1.2.2
   sass:
-    specifier: ^1.75.0
-    version: 1.75.0
+    specifier: ^1.76.0
+    version: 1.76.0
   sass-loader:
     specifier: ^14.2.1
-    version: 14.2.1(sass@1.75.0)(webpack@5.91.0)
+    version: 14.2.1(sass@1.76.0)(webpack@5.91.0)
   style-loader:
     specifier: ^4.0.0
     version: 4.0.0(webpack@5.91.0)
@@ -78,7 +78,7 @@ devDependencies:
     version: 9.5.1(typescript@5.4.5)(webpack@5.91.0)
   ts-node:
     specifier: ^10.9.2
-    version: 10.9.2(@types/node@20.12.7)(typescript@5.4.5)
+    version: 10.9.2(@types/node@20.12.10)(typescript@5.4.5)
   typescript:
     specifier: ^5.4.5
     version: 5.4.5
@@ -1544,12 +1544,12 @@ packages:
     dev: true
     optional: true
 
-  /@preact/compat@17.1.2(preact@10.20.2):
+  /@preact/compat@17.1.2(preact@10.21.0):
     resolution: {integrity: sha512-7pOZN9lMDDRQ+6aWvjwTp483KR8/zOpfS83wmOo3zfuLKdngS8/5RLbsFWzFZMGdYlotAhX980hJ75bjOHTwWg==}
     peerDependencies:
       preact: '*'
     dependencies:
-      preact: 10.20.2
+      preact: 10.21.0
     dev: false
 
   /@sindresorhus/merge-streams@1.0.0:
@@ -1689,8 +1689,8 @@ packages:
       undici-types: 5.26.5
     dev: true
 
-  /@types/node@20.12.7:
-    resolution: {integrity: sha512-wq0cICSkRLVaf3UGLMGItu/PtdY7oaXaI/RVU+xliKVOtRna3PRY57ZDfztpDL0n11vfymMUnXv8QwYCO7L1wg==}
+  /@types/node@20.12.10:
+    resolution: {integrity: sha512-Eem5pH9pmWBHoGAT8Dr5fdc5rYA+4NAovdM4EktRPVAAiJhmWWfQrA0cFhAbOsQdSfIHjAud6YdkbL69+zSKjw==}
     dependencies:
       undici-types: 5.26.5
     dev: true
@@ -5077,8 +5077,8 @@ packages:
       source-map-js: 1.2.0
     dev: true
 
-  /preact@10.20.2:
-    resolution: {integrity: sha512-S1d1ernz3KQ+Y2awUxKakpfOg2CEmJmwOP+6igPx6dgr6pgDvenqYviyokWso2rhHvGtTlWWnJDa7RaPbQerTg==}
+  /preact@10.21.0:
+    resolution: {integrity: sha512-aQAIxtzWEwH8ou+OovWVSVNlFImL7xUCwJX3YMqA3U8iKCNC34999fFOnWjYNsylgfPgMexpbk7WYOLtKr/mxg==}
     dev: false
 
   /pretty-error@4.0.0:
@@ -5366,7 +5366,7 @@ packages:
   /safer-buffer@2.1.2:
     resolution: {integrity: sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==}
 
-  /sass-loader@14.2.1(sass@1.75.0)(webpack@5.91.0):
+  /sass-loader@14.2.1(sass@1.76.0)(webpack@5.91.0):
     resolution: {integrity: sha512-G0VcnMYU18a4N7VoNDegg2OuMjYtxnqzQWARVWCIVSZwJeiL9kg8QMsuIZOplsJgTzZLF6jGxI3AClj8I9nRdQ==}
     engines: {node: '>= 18.12.0'}
     peerDependencies:
@@ -5388,12 +5388,12 @@ packages:
         optional: true
     dependencies:
       neo-async: 2.6.2
-      sass: 1.75.0
+      sass: 1.76.0
       webpack: 5.91.0(webpack-cli@5.1.4)
     dev: true
 
-  /sass@1.75.0:
-    resolution: {integrity: sha512-ShMYi3WkrDWxExyxSZPst4/okE9ts46xZmJDSawJQrnte7M1V9fScVB+uNXOVKRBt0PggHOwoZcn8mYX4trnBw==}
+  /sass@1.76.0:
+    resolution: {integrity: sha512-nc3LeqvF2FNW5xGF1zxZifdW3ffIz5aBb7I7tSvOoNu7z1RQ6pFt9MBuiPtjgaI62YWrM/txjWlOCFiGtf2xpw==}
     engines: {node: '>=14.0.0'}
     hasBin: true
     dependencies:
@@ -5958,7 +5958,7 @@ packages:
       webpack: 5.91.0(webpack-cli@5.1.4)
     dev: true
 
-  /ts-node@10.9.2(@types/node@20.12.7)(typescript@5.4.5):
+  /ts-node@10.9.2(@types/node@20.12.10)(typescript@5.4.5):
     resolution: {integrity: sha512-f0FFpIdcHgn8zcPSbf1dRevwt047YMnaiJM3u2w2RewrB+fob/zePZcrOyQoLMMO7aBIddLcQIEK5dYjkLnGrQ==}
     hasBin: true
     peerDependencies:
@@ -5977,7 +5977,7 @@ packages:
       '@tsconfig/node12': 1.0.11
       '@tsconfig/node14': 1.0.3
       '@tsconfig/node16': 1.0.4
-      '@types/node': 20.12.7
+      '@types/node': 20.12.10
       acorn: 8.11.2
       acorn-walk: 8.3.1
       arg: 4.1.3
