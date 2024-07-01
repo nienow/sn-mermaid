@@ -11,8 +11,8 @@
     "goober": "^2.1.14",
     "js-base64": "^3.7.7",
     "mermaid": "10.2.3",
-    "monaco-editor": "0.49.0",
-    "preact": "^10.22.0",
+    "monaco-editor": "0.50.0",
+    "preact": "^10.22.1",
     "sn-extension-api": "0.3.4",
     "svg-pan-zoom": "^3.6.1"
   },
@@ -33,9 +33,9 @@
     "style-loader": "^4.0.0",
     "ts-loader": "^9.5.1",
     "ts-node": "^10.9.2",
-    "typescript": "^5.4.5",
+    "typescript": "^5.5.3",
     "url-loader": "^4.1.1",
-    "webpack": "^5.92.0",
+    "webpack": "^5.92.1",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^5.0.4",
     "zip-webpack-plugin": "^4.0.1"
