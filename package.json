@@ -12,7 +12,7 @@
     "js-base64": "^3.7.7",
     "mermaid": "10.2.3",
     "monaco-editor": "0.50.0",
-    "preact": "^10.23.1",
+    "preact": "^10.23.2",
     "sn-extension-api": "0.3.4",
     "svg-pan-zoom": "^3.6.1"
   },
