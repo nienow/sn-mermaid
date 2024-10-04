@@ -7,7 +7,7 @@
     "preview": "live-server --cors --port=8081 dist/"
   },
   "dependencies": {
-    "@preact/compat": "^17.1.2",
+    "@preact/compat": "^18.3.1",
     "goober": "^2.1.14",
     "js-base64": "^3.7.7",
     "mermaid": "11.1.0",
