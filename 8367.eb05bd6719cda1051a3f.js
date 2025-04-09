@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunksn_mermaid=self.webpackChunksn_mermaid||[]).push([[8367],{88367:(e,r,s)=>{s.d(r,{createArchitectureServices:()=>c.S});var c=s(33258);s(98557)}}]);
