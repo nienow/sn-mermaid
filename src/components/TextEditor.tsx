@@ -1,4 +1,4 @@
-import React, {useRef, useState} from 'react';
+import {useRef, useState} from 'react';
 import {useEffect} from "preact/compat";
 import * as monaco from 'monaco-editor';
 import Examples from "./Examples";
@@ -76,6 +76,6 @@ const TextEditor = ({onUpdate}) => {
       </CodePanel>}
     </>
   );
-}
+};
 
-export default TextEditor
+export default TextEditor;

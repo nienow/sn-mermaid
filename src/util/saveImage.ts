@@ -2,9 +2,6 @@ import mermaid from 'mermaid';
 import {toBase64} from 'js-base64';
 import snApi from 'sn-extension-api';
 
-export const copyClipboard = () => {
-  exportImage(clipboardCopy);
-};
 export const downloadPNG = () => {
   exportImage(downloadImage);
 };
@@ -13,27 +10,6 @@ export const downloadSVG = () => {
   mermaid.render('export', snApi.text).then(({svg}) => {
     simulateDownload(getFileName('svg'), `data:image/svg+xml;base64,${getBase64SVG(svg)}`);
   });
-};
-
-const clipboardCopy = (context, image) => {
-  return () => {
-    const {canvas} = context;
-    context.drawImage(image, 0, 0, canvas.width, canvas.height);
-    canvas.toBlob((blob) => {
-      try {
-        if (!blob) {
-          throw new Error('blob is empty');
-        }
-        void navigator.clipboard.write([
-          new ClipboardItem({
-            [blob.type]: blob
-          })
-        ]);
-      } catch (error) {
-        console.error(error);
-      }
-    });
-  };
 };
 
 const downloadImage = (context, image) => {

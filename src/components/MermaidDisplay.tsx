@@ -1,4 +1,4 @@
-import React, {useRef} from 'react';
+import {useRef} from 'react';
 import mermaid from 'mermaid';
 import {useEffect} from "preact/compat";
 import panzoom from 'svg-pan-zoom';
@@ -96,6 +96,6 @@ const MermaidDisplay = ({code}) => {
       </BottomPanel>
     </OutputContainer>
   );
-}
+};
 
-export default MermaidDisplay
+export default MermaidDisplay;

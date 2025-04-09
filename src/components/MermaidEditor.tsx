@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import {useState} from 'react';
 import TextEditor from "./TextEditor";
 import {styled} from "goober";
 import MermaidDisplay from "./MermaidDisplay";
@@ -29,6 +29,6 @@ const MermaidEditor = () => {
       <MermaidDisplay code={code}/>
     </Container>
   );
-}
+};
 
-export default MermaidEditor
+export default MermaidEditor;

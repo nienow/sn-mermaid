@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import {useState} from 'react';
 import {styled} from "goober";
 import {downloadPNG, downloadSVG} from "../util/saveImage";
 import {ActionButton} from "./Button";
@@ -46,7 +46,7 @@ const SaveMenu = () => {
       {/*<MenuItem onClick={onCopy}>Copy to Clipboard</MenuItem>*/}
       <MenuItem onClick={onDownloadPNG}>Download PNG</MenuItem>
       <MenuItem onClick={onDownloadSVG}>Download SVG</MenuItem>
-    </Dialog>
+    </Dialog>;
   };
 
   return (
@@ -55,6 +55,6 @@ const SaveMenu = () => {
       {renderDialog()}
     </>
   );
-}
+};
 
-export default SaveMenu
+export default SaveMenu;

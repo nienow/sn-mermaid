@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import {useState} from 'react';
 import {styled} from "goober";
 import {EXAMPLES} from "../util/examples";
 import {ActionButton} from "./Button";
@@ -38,7 +38,7 @@ const Examples = ({onSelect}) => {
           return <MenuItem onClick={() => selectExample(value)}>{key}</MenuItem>;
         })
       }
-    </Dialog>
+    </Dialog>;
   };
 
   return (
@@ -47,6 +47,6 @@ const Examples = ({onSelect}) => {
       {renderDialog()}
     </>
   );
-}
+};
 
-export default Examples
+export default Examples;
