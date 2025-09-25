@@ -11,7 +11,7 @@
     "goober": "^2.1.16",
     "js-base64": "^3.7.8",
     "mermaid": "11.6.0",
-    "monaco-editor": "0.52.2",
+    "monaco-editor": "0.53.0",
     "preact": "^10.27.2",
     "sn-extension-api": "0.4.0",
     "svg-pan-zoom": "^3.6.2"
