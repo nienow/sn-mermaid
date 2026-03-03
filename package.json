@@ -7,7 +7,7 @@
     "preview": "live-server --cors --port=8081 dist/"
   },
   "dependencies": {
-    "@preact/compat": "^18.3.1",
+    "@preact/compat": "^18.3.2",
     "goober": "^2.1.18",
     "js-base64": "^3.7.8",
     "mermaid": "11.12.2",
@@ -35,7 +35,7 @@
     "ts-node": "^10.9.2",
     "typescript": "^5.9.3",
     "url-loader": "^4.1.1",
-    "webpack": "^5.105.2",
+    "webpack": "^5.105.3",
     "webpack-cli": "^6.0.1",
     "webpack-dev-server": "^5.2.3",
     "zip-webpack-plugin": "^4.0.3"
